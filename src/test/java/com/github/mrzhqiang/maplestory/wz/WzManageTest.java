@@ -12,13 +12,15 @@ import static org.junit.Assert.*;
 
 public class WzManageTest {
 
-    private static final String BASE_WZ_EXPECTED =
-            "[smap.img.xml, StandardPDD.img.xml, zmap.img.xml, zmap_cn.img.xml]";
+    private static final String[] BASE_WZ_EXPECTED = { "StandardPDD.img.xml", "smap.img.xml",
+            "zmap.img.xml", "zmap_cn.img.xml" };
 
     @Test
     public void testWzPath() {
         File root = new File(WzManage.WZ_DIR, "/Base.wz");
-        assertEquals(BASE_WZ_EXPECTED, Arrays.toString(root.list()));
+        String[] wzFileNames = root.list();
+        Arrays.sort(wzFileNames);
+        assertArrayEquals(BASE_WZ_EXPECTED, wzFileNames);
     }
 
     @Test
