@@ -19,6 +19,12 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(org.rise.server.maps);
 importPackage(org.rise.net.channel);
 importPackage(org.rise.tools);

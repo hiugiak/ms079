@@ -6,6 +6,12 @@
 Note by Tykian: Minor fixes/additions
 **/
 
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(java.lang);
 
 var status = -1;

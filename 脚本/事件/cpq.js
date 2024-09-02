@@ -1,4 +1,10 @@
-﻿importPackage(Packages.tools);
+﻿try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
+importPackage(Packages.tools);
 
 var exitMap = 0;
 var waitingMap = 1;

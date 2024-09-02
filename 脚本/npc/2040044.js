@@ -4,6 +4,12 @@
  联系方式：840645183  
  =====================
  */
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(net.sf.cheryy.tools);
 importPackage(net.sf.cherry.server.life);
 importPackage(java.awt);

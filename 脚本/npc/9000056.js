@@ -1,5 +1,11 @@
 /* global cm, Packages, MapleItemInformationProvider, World, MaplePacketCreator */
 
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(Packages.tools);
 importPackage(Packages.handling.world);
 importPackage(Packages.server);

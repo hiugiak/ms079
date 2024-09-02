@@ -1,6 +1,12 @@
 /**
 	Cloto - Hidden Street : 1st Accompaniment
 **/
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(java.awt);
 importPackage(Packages.tools);
 importPackage(Packages.server);

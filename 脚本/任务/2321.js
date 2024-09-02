@@ -8,6 +8,12 @@ Version 1.0 - Script Done.(18/7/2010)
 =============================================================
 */
 
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(Packages.client);
 
 var status = -1;

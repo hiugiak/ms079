@@ -1,3 +1,9 @@
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(Packages.client);
 var random = java.lang.Math.floor(Math.random() * 4 + 1);
 var randoma = java.lang.Math.floor(Math.random() * 3 + 1);

@@ -23,6 +23,12 @@
 	Map(s): 		Hidden Street : Free Market Entrance (910000000)
 	Description: 		Takes you back to original location
 */
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(org.server.maps);
 
 function enter(pi) {

@@ -1,5 +1,11 @@
 var status = 0;
 var section = 0;
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(java.lang);
 //questid 29932, infoquest 7760
 function action(mode, type, selection) {

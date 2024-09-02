@@ -3,6 +3,12 @@
  Map(s): 		Victoria Road : Ellinia (180000000)
  Description: 		Maxes out your stats and able to modify your equipment stats
  */
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(java.lang);
 
 var status = 0;

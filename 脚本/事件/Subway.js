@@ -1,3 +1,9 @@
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(Packages.tools);
 
 var closeTime = 120000; //The time to close the gate

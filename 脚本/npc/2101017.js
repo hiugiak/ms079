@@ -5,6 +5,12 @@
  * @func: Ariant PQ (Outdated GMS-like text, AriantPQ is closed off and I am unable to get this.)
 */
 
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(Packages.tools);
 importPackage(Packages.client);
 

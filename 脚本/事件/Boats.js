@@ -2,6 +2,12 @@
 	魔法森林搭船系統改寫 by:Kodan
 **/
 
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(Packages.client);
 importPackage(Packages.tools);
 importPackage(Packages.server.life);

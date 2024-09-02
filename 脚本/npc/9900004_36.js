@@ -6,6 +6,12 @@
  */
 
 
+try {
+    load("nashorn:mozilla_compat.js");
+} catch (e) {
+   // ignore the exception - perhaps we are running on Rhino!
+}
+
 importPackage(net.sf.odinms.client);
 
 var aaa = "#fUI/UIWindow.img/Quest/icon9/0#";
